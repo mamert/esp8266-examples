@@ -1,2 +1,3 @@
 # esp8266-examples
-random stuff I play with
+Random stuff I play with.
+Not really good as guidelines for beginners, and not particularly insightful.
