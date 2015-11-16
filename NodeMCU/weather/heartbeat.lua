@@ -1,8 +1,14 @@
+
+owmAppId = "..."
+tsKey = "..."
+
 function getWeather()
 	local conn=net.createConnection(net.TCP, 0) 
 
 	conn:on("connection", function(conn, payload)
-				conn:send("GET /data/2.5/weather?lat=54.3652832&lon=18.6571822&appid=******&units=metric HTTP/1.1\r\n".. 
+				conn:send("GET /data/2.5/weather?lat=54.3652832&lon=18.6571822&appid="..
+						  owmAppId..
+						  "&units=metric HTTP/1.1\r\n".. 
 						  "Host: api.openweathermap.org\r\n"..
 						  "Accept: */*\r\n"..
 						  "User-Agent: Mozilla/4.0 (compatible;)"..
@@ -28,7 +34,9 @@ function sendThingSpeakUpdate(value)
 		end) 
 	
 	conn:on("connection", function(conn, payload)
-			conn:send("GET /update?key=******&field1="..value.." HTTP/1.1\r\n".. 
+			conn:send("GET /update?key="..
+					  tsKey..
+					  "&field1="..value.." HTTP/1.1\r\n".. 
 					  "Host: api.thingspeak.com\r\n"..
 					  "Accept: */*\r\n"..
 					  "User-Agent: Mozilla/4.0 (compatible;)"..

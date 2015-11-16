@@ -1,5 +1,8 @@
+wifiSSID = "..."
+wifiPass = "..."
+
 wifi.setmode(wifi.STATION)
-wifi.sta.config("****","****")
+wifi.sta.config(wifiSSID, wifiPass)
 print(wifi.sta.getip())
 glob_last_temp = "<<undefined>>"
 tmr.alarm(0, 15000, 1, function() dofile("heartbeat.lua") end ) -- poll weather every minute
