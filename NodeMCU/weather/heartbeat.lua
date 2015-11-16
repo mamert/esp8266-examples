@@ -1,7 +1,4 @@
 
-owmAppId = "..."
-tsKey = "..."
-
 function getWeather()
 	local conn=net.createConnection(net.TCP, 0) 
 

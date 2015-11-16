@@ -1,0 +1,5 @@
+wifiSSID = "..."
+wifiPass = "..."
+
+owmAppId = "..."
+tsKey = "..."

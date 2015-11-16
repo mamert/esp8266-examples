@@ -1,6 +1,5 @@
-wifiSSID = "..."
-wifiPass = "..."
 
+dofile("consts.lua")
 wifi.setmode(wifi.STATION)
 wifi.sta.config(wifiSSID, wifiPass)
 print(wifi.sta.getip())
